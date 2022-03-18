@@ -85,6 +85,13 @@ Thus, while my intention was to use integrations tests that hit multiple packet 
 
 I could have substituted some of that with unit tests. However, getting high coverage through unit tests would've taken a higher time investment that I'll leave as future work.
 
+## Security
+
+Given my time constraints, I implemented a few basic security measures:
+
+- Used [Helmet](https://helmetjs.github.io/) to protect the app by setting HTTP headers appropriately
+- Scan the app's dependencies for known vulnerabilities with [Snyk](https://snyk.io)
+
 ## Pending work
 
 The 3 most critical pending tasks are:
@@ -103,13 +110,5 @@ Beyond these points, some other area could include:
 
 - Using rate limiters to protect against abusive behavior and DDoS attacks
 - Handling error more gracefully to give users more granular information about what went wrong and return the appropriate HTTP status code
-- Using [Helmet](https://helmetjs.github.io/) to protect the app by setting HTTP headers appropriately
-- Scan the app with [Snyk](https://snyk.io) to identify dependencies with known vulnerabilities
 - Setting up authorization to restrict who can use the app
-
-## Potential issues
-
-- Using a library to do the parsing
-  - Wildcard versions: `*`, `latest` -> specific version number
-- Implement caching
-- Circular dependencies
+- Handle circular dependencies

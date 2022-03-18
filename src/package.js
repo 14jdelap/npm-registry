@@ -1,7 +1,5 @@
-const { append } = require('express/lib/response');
 const got = require('got');
 const utils = require("./utils/package.utils");
-const semverMaxSatisfying = require('semver/ranges/max-satisfying');
 
 async function getPackage(req, res, next) {
   const { name, version } = req.params;

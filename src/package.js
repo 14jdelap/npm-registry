@@ -13,7 +13,7 @@ async function getPackageEndpoint(name, version, result, next) {
   const [ versionNumber, qualifier ] = utils.parseVersion(version);
 
   if (utils.hitVersionEndpoint(versionNumber, qualifier)) {
-    // If version number is /\d+.\d+.\d+/ AND null or = qualifier
+    // If version number is /\d+.\d+.\d+/ AND null or has = in qualifier
     // Get a specific version's endpoint
     await getVersionEndpoint(name, versionNumber, result, next)
   } else {

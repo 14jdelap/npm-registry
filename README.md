@@ -1,6 +1,6 @@
 # Hi!
 
-This is my solution to the Snyk challenge.
+This is my solution to the challenge.
 
 The original exercise description is in `excercise-description.md`. My solution is in `package.js`.
 
@@ -90,7 +90,7 @@ I could have substituted some of that with unit tests. However, getting high cov
 Given my time constraints, I implemented a few basic security measures:
 
 - Used [Helmet](https://helmetjs.github.io/) to protect the app by setting HTTP headers appropriately
-- Scan the app's dependencies for known vulnerabilities with [Snyk](https://snyk.io)
+- Scanned the app's dependencies for known vulnerabilities with [Snyk](https://snyk.io)
 
 ## Pending work
 

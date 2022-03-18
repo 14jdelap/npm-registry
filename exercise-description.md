@@ -17,13 +17,13 @@ package.
 
 ## Things to consider
 
-* *Look at the inner "dependencies" object of a package for analysis of
+* Look at the inner "dependencies" object of a package for analysis of
   first-order dependencies.
-* *npm returns dependency ranges that follow the
+* npm returns dependency ranges that follow the
   [Semantic Versioning](https://semver.org/) specification, which you'll need to
   account for.
-* *The packages update from time to time, just as their dependencies do.
-* *What makes a good web service? API, performance, data storage, low latency,
+* The packages update from time to time, just as their dependencies do.
+* What makes a good web service? API, performance, data storage, low latency,
   scalability, monitoring, a great web interface, you name it :)
-* *Consider the quality and structure of your codebase; is it maintainable?
-* *Consider production readiness (to some extent) and is it safe to deploy changes?
+* Consider the quality and structure of your codebase; is it maintainable?
+* Consider production readiness (to some extent) and is it safe to deploy changes?

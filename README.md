@@ -1,8 +1,4 @@
-# Hi!
-
-This is my solution to the challenge.
-
-The original exercise description is in `excercise-description.md`. My solution is in `package.js`.
+# NPM Registry 
 
 ## Approach and priorities
 

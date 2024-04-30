@@ -1,4 +1,8 @@
-# NPM Registry 
+# NPM Transitive Registry Analyzer
+
+NodeJS has a managed packages environment called npm. A package is a functional NodeJS module with versioning, documentation, dependencies (in the form of other packages), and more.
+
+The challenge was writing the `/package` endpoint to return all of the transitive dependencies for a package. It takes a package name and version, and returns the dependencies of that package in a tree view.
 
 ## Approach and priorities
 
@@ -60,7 +64,7 @@ As I wrote the application I tested with logs and debugging tools.
 
 I also changed the test cases to reflect the APIs new ability to get its transitive dependencies.
 
-While this app's `package.js` code is reasonably well covered, this program still has mediocre testing because most lines in `package.utils.js` aren't tested.
+While this app's `package.js` code is reasonably well covered, it could have more test coverage of its utility functions
 
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                  
 -------------------|---------|----------|---------|---------|------------------------------------
@@ -88,9 +92,9 @@ Given my time constraints, I implemented a few basic security measures:
 - Used [Helmet](https://helmetjs.github.io/) to protect the app by setting HTTP headers appropriately
 - Scanned the app's dependencies for known vulnerabilities with [Snyk](https://snyk.io)
 
-## Pending work
+## Future work
 
-The 3 most critical pending tasks are:
+The 3 most important pending tasks are:
 
 1. Add edge cases like `>= 2.1.2 < 3`
 2. Improving latency
@@ -100,7 +104,7 @@ Regarding 2, a low-hanging fruit is to cache responses to avoid unnecessary API 
 
 These first 2 tasks are critical because they'd allow us to hit any packet endpoint. This would then allow us to validate our application logic with automated tests (see the problem I highlighted in the testing section).
 
-Finally, the code's organization could be modified. However, to do this we should know how this small program will likely grow to know how to optimie it's maintainability and readability.
+Finally, the code's organization could be modified. However, to do this we should know how this small program will likely grow to know how to optimize it's maintainability and readability.
 
 Beyond these points, some other area could include:
 
